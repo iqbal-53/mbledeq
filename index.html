@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MbledeQ Seafood Cafe & Resto</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/util.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <!--===============================================================================================-->
+  </head>
+  <body>
+    <!-- Gambar bg Index -->
+    <div class="simpleslide100">
+      <div class="simpleslide100-item bg-img1" style="background-image: url('assets/images/bg01.jpg')"></div>
+      <div class="simpleslide100-item bg-img1" style="background-image: url('assets/images/bg02.jpg')"></div>
+      <div class="simpleslide100-item bg-img1" style="background-image: url('assets/images/bg03.jpg')"></div>
+      <div class="simpleslide100-item bg-img1" style="background-image: url('assets/images/bg04.jpg')"></div>
+    </div>
+
+    <div class="flex-col-c-sb size1 overlay1 p-l-75 p-r-75 p-t-20 p-b-40 p-lr-15-sm">
+      <!--  -->
+      <div class="flex-w flex-sb-m">
+        <div class="wrappic1 m-r-30 m-t-10 m-b-10">
+          <a href="#"><img src="assets/images/logo.png" alt="LOGO" /></a>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="flex-col-c-m p-l-15 p-r-15 p-b-150">
+        <h3 class="l1-txt2 txt-center p-b-5 respon1">Welcome to MbledeQ</h3>
+        <p style="color: #989898" class="txt-center p-b-50">Pelopor Seafood, Cafe & Resto di Gresik</p>
+        <div>
+          <a target="_blank" class="how-btn-play1 m-r-20 m-l-20 flex-c-m" href="seafood/home.html">MbledeQ Seafood</a>
+          <a target="_blank" class="how-btn-play1 m-r-20 m-l-20 flex-c-m" href="cafenresto/home.html">MbledeQ Cafe and Resto</a>
+        </div>
+      </div>
+    </div>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      (function ($) {
+        "use strict";
+        $(".simpleslide100").each(function () {
+          var delay = 4000;
+          var speed = 1000;
+          var itemSlide = $(this).find(".simpleslide100-item");
+          var nowSlide = 0;
+
+          $(itemSlide).hide();
+          $(itemSlide[nowSlide]).show();
+          nowSlide++;
+          if (nowSlide >= itemSlide.length) {
+            nowSlide = 0;
+          }
+
+          setInterval(function () {
+            $(itemSlide).fadeOut(speed);
+            $(itemSlide[nowSlide]).fadeIn(speed);
+            nowSlide++;
+            if (nowSlide >= itemSlide.length) {
+              nowSlide = 0;
+            }
+          }, delay);
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>
